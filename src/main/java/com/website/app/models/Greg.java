@@ -1,4 +1,4 @@
-package models;
+package com.website.app.models;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Table(name = "greg")
 public class Greg {
 
-    //FIELDS with ANNOTATIONS to create db tables---->---->---->---->---->---->
+    //FIELDS with @ANNOTATIONS to auto generate DB tables---->---->---->---->---->---->
     @Id
     @GeneratedValue
     private long id;
@@ -30,6 +30,14 @@ public class Greg {
     }
 
     //GETTERS & SETTERS---->---->---->---->---->---->---->---->---->---->---->
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getFirst_name() {
         return first_name;
     }
